@@ -90,11 +90,11 @@ class _MyHomePageState extends State<MyHomePage> {
           style: TextStyle(
             color: Colors.white,
             fontFamily: "Pacifico",
-
-          ),),
+          ),
+        ),
         centerTitle: true,
       ),
-   bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: BottomNavigationBar(
         currentIndex: 0, // Current index of selected item
         items: const [
           BottomNavigationBarItem(
@@ -119,7 +119,10 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
-        child: Column(
+
+        child: SingleChildScrollView(
+
+          child: Column(
           // Column is also a layout widget. It takes a list of children and
           // arranges them vertically. By default, it sizes itself to fit its
           // children horizontally, and tries to be as tall as its parent.
@@ -135,6 +138,33 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+
+            const Row(
+
+             mainAxisAlignment: MainAxisAlignment.center,
+             
+
+
+             children: [
+
+              Expanded(
+                
+                child: Image(
+              image: NetworkImage('https://images.unsplash.com/photo-1711861413115-797ee0655214?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
+            
+              ),),
+
+              Expanded(child: Image(
+              image: AssetImage('assets/blackWomanFace.jpeg'),
+           
+              ),) 
+       
+             ] 
+
+              
+            ),
+
+         
             const Text(
               'You have pushed the button this many times:',
             ),
@@ -144,6 +174,8 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
+        ),
+        
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
