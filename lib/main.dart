@@ -168,6 +168,18 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text(
               'You have pushed the button this many times:',
             ),
+
+           ElevatedButton.icon(
+            onPressed: () {}, 
+            icon: Icon(
+              Icons.anchor,
+              color: Colors.white,
+            ),
+            label: Text("Click Me", style: TextStyle(color: Colors.white),),
+            style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.pinkAccent)
+            ),
+           
+            ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
